@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Send Airtime</title>
+    <link rel="stylesheet" href="style.css">
 
     <link
       rel="stylesheet"
@@ -29,9 +30,12 @@
     ></script>
   </head>
   <body>
-    <div class="contaniner mt-0 ml-5 mr-5">
-      <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <a class="navbar-brand" href="#">Airtime</a>
+    <div class="contaniner mt-0 ml-5 mr-5 bg-dark">
+      <div class="row  container-fluid">
+        <div  class="col-12">
+          
+      <nav class="navbar navbar-expand-lg bg-black navbar-fixed-top">
+        <a class="navbar-brand text-white" href="#">Airtime</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,13 +50,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link text-light" href="#">Home</a>
             </li>
             <li class="nav-item">
               <!-- Modal trigger button -->
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-dark"
                 data-toggle="modal"
                 data-target="#exampleModal"
               >
@@ -61,7 +65,7 @@
 
               <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-dark"
               data-toggle="modal"
               data-target="#questionModal"
             >
@@ -73,6 +77,123 @@
           </ul>
         </div>
       </nav>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="container ">
+        <div class="row">
+          <div class="card card-shadow mr-1 col-3">
+            <img src="image3.jpg" class="card-img-top img-fluid" alt="Name of Image">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <h5 class="card-title">ksh 300</h5>
+              <button class="btn btn-primary">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="card shadow mr-1 col-3">
+            <img src="image3.jpg" class="card-img-top img-fluid" alt="Name of Image">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <h5 class="card-title">ksh 300</h5>
+              <button class="btn btn-primary">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="card shadow mr-1 col-3">
+            <img src="image3.jpg" class="card-img-top img-fluid" alt="Name of Image">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <h5 class="card-title">ksh 300</h5>
+              <button class="btn btn-primary">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="card shadow mr-1 col-3">
+            <img src="image3.jpg" class="card-img-top img-fluid" alt="Name of Image">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <h5 class="card-title">ksh 300</h5>
+              <button class="btn btn-primary">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="card shadow mr-1 col-3">
+            <img src="image3.jpg" class="card-img-top img-fluid" alt="Name of Image">
+            <div class="card-body">
+              <h5 class="card-title">Sugar</h5>
+              <h5 class="card-title">ksh 300</h5>
+              <button class="btn btn-primary">Add to cart</button>
+            </div>
+          </div>
+        </div>        
+      </div>  
+
+
+
+
+
+
+      
+    <div class="row d-flex justify-content-centre align-item-centre">
+      <div class="col-12 ">
+        <!-- footer component-->
+        <footer class="bg-dark" id="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-4">
+                <h4 class="text-center text-white">About Us</h4>
+                <p class="text-center text-white" >Student registration system for kenyan schools</p>
+                <ul class="navbar-nav" class="text-center">
+                  <li class="nav-item active">
+                    <a class="nav-link text-white text-center" href="#home"
+                      >Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-center" href="#tabledata">Students</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-center" href="#register">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white text-center " href="openModal()" >Login</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h4 class="text-center text-white">Contact Us</h4>
+                <p class="text-center text-white">Email: alexkemboi97@gmail.com</p>
+                <p class="text-center text-white">Phone: 0726837210</p>
+                <p class="text-center text-white">Address: P.o Box 86-30102</p>
+                <p class="text-center text-white">town: Nairobi</p>
+              </div>
+              <div class="col-4">
+                <h4 class="text-center text-white">Follow Us</h4>
+                <p class="text-center  text-white">Facebook</p>
+                <p class="text-center text-white">Twitter</p>
+                <p class="text-center text-white">Instagram</p>              
+                <p class="text-center text-white">Linkdin</p>              
+                <p class="text-center text-white" >Github</p>
+              </div>
+            </div>
+            <p class="text-center  text-white">Copyright © Your Website 2023</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+      
+           
+      
+      
 
       <!-- Modal to buy airtime -->
       <div
@@ -86,7 +207,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Buy Airtime</h5>
+              <h5 class="modal-title " id="exampleModalLabel">Buy Airtime</h5>
               <button
                 type="button"
                 class="close"
@@ -126,7 +247,7 @@
                     </button>
                     <button
                       class="form-control btn-danger m-5"
-                      onclick="makePayment()"
+                      id="sendAirtime"
                     >
                       Send Airtime
                     </button>
@@ -138,9 +259,8 @@
         </div>
       </div>
     </div>
-
-
-
+    </div>
+    </div>
 
 
 
@@ -179,9 +299,7 @@
               <div class="col-3">
                 <input type="number" id="question" class="form-control" />
               </div>
-
-
-                        <div class="col-3">
+                <div class="col-3">
                             <button
                             class="form-control btn-success m-5"
                             onclick="makePayment()"
@@ -198,14 +316,8 @@
                             
                         <div class="col-12">
                             <input type="tel" id="phonenumber" class="form-control" />
-                        </div>
-
-                                  
-
-
-            </div>
-
-              
+                        </div>  
+                </div>            
 
               <div class="modal-footer m-right">
                 <div class="col-4"><button
@@ -231,15 +343,17 @@
       </div>
     </div>
   </div>
+
+
+
+
+  
+
+
+
+
+
 </div>
-
-
-
-
-
-
-
-
-    <script src="app.js"></script>
+<script src="app.js"></script>
   </body>
 </html>

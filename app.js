@@ -1,58 +1,14 @@
-const stanbic = new Stanbic();
-class Stanbic {
-  constructor() {
-    this.consumerKey = "a01479ca2e0bdee0510f29988e8e1130";
-    this.consumerSecret = "6fa98994067428c7047f5519ad3e2b46";
-    this.accessToken = "";
-  }
+document.getElementById("sendAirtime").addEventListener("click", (e) => {
+  e.preventDefault();
 
-  async getToken() {
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body:
-        "client_id=" +
-        this.consumerKey +
-        "&client_secret=" +
-        this.consumerSecret +
-        "&scope=payments&grant_type=client_credentials",
-    };
-
-    const response = await fetch(
-      "https://api.connect.stanbicbank.co.ke/api/sandbox/auth/oauth2/token",
-      options
-    );
-    const json = await response.json();
-    this.accessToken = json.access_token;
-    return this.accessToken;
-  }
-
-  async makePayment(token, phone, amount) {
-    const options = {
-      method: "POST",
-      headers: {
-        Authorization: "Bearer " + token,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        dbsReferenceId: "REW21331DR5F1",
-        billAccountRef: "3333562174",
-        amount: amount,
-        mobileNumber: phone,
-        corporateNumber: "740757",
-        bankReferenceId: "0100010969764",
-        txnNarrative: "ttsteeeee",
-        callBackUrl: "",
-      }),
-    };
-
-    const response = await fetch(
-      "https://api.connect.stanbicbank.co.ke/api/sandbox/mpesa-checkout",
-      options
-    );
-    const json = await response.json();
-    console.log(json);
-  }
-}
+  // Collect the phone number and amount from the form input field
+  const phoneNumber = document.getElementById("phonenumber").value;
+  const amount = document.getElementById("amount").value;
+  console.log(phoneNumber + "  " + amount);
+  // Send the phone number to the Node.js server using an HTTP POST request
+  fetch("http://localhost:3003/submit-phone-number", {
+    method: "POST",
+    body: JSON.stringify({ phoneNumber: phoneNumber, amount: amount }),
+    headers: { "Content-Type": "application/json" },
+  });
+});
